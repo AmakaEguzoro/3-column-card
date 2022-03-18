@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-grey: hsl(0, 0%, 95%);
+}
+
+body {
+  background-color: var(--light-grey);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  font-family: "legend Deca", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+.column {
+  padding: 4rem;
+}
+.column img {
+  padding-bottom: 15px;
+}
+
+.container {
+  max-width: 960px;
+
+  margin: 0 auto;
+}
+
+.row {
+  border-radius: 10px;
+  margin: 2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sedan h1,
+.suv h1,
+.luxury h1 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  color: var(--light-grey);
+  font-family: 700;
+  padding-bottom: 15px;
+}
+
+.sedan p,
+.suv p,
+.luxury p {
+  color: var(--transparent-white);
+  line-height: 1.6;
+  padding-bottom: 40px;
+}
+.sedan {
+  background-color: var(--bright-orange);
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+button {
+  background-color: var(--light-grey);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 40px;
+  border: 2px solid var(--transparent-white);
+  transition: all 0.4s ease-in-out;
+}
+.btn-sedans {
+  color: var(--bright-orange);
+}
+.btn-suv {
+  color: var(--dark-cyan);
+}
+.btn-luxury {
+  color: var(--very-dark-cyan);
+}
+
+.btn-sedans:hover {
+  color: var(--transparent-white);
+  background: transparent;
+}
+
+.btn-suv:hover {
+  color: var(--transparent-white);
+  background: transparent;
+}
+
+.btn-luxury:hover {
+  color: var(--transparent-white);
+  background: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .row {
+    margin: 2rem 1rem;
+  }
+}
